@@ -1,8 +1,9 @@
+package Uber;
 abstract class Food {
-    String strItemName;
-    int intCost;
-    int intCalories;
-    int menuNumber;
+    private String strItemName;
+    private int intCost;
+    private int intCalories;
+    private int menuNumber;
 
     public Food(String newName, int newCost, int newCalories, int newMenuNumber){
         strItemName = newName;
@@ -18,6 +19,10 @@ abstract class Food {
     }
 
     public void addToOrder(){
-        return add
+        listOfFoods.add(this);
+    }
+    public void removeFromOrder(){
+        
+
     }
 }
