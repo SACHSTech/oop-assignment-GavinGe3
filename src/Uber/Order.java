@@ -7,11 +7,14 @@ public class Order {
     ArrayList<Food> listOfFoods = new ArrayList<Food>();
 
 
-    public Order(ArrayList<Food> newListOfFoods = new ArrayList<Food>(), int newTotalCost){
+    public Order(ArrayList<Food> newListOfFoods, int newTotalCost, Customer newCustomer){
         listOfFoods = newListOfFoods;
         totalCost = newTotalCost;
+        customer = newCustomer;
+    }
 
-
+    public void addToOrder(Food newFood){
+        listOfFoods.add(newFood);
     }
     
 

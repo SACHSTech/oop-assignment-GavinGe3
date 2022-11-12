@@ -1,5 +1,6 @@
 package Uber;
-abstract class Food {
+
+public abstract class Food {
     private String strItemName;
     private int intCost;
     private int intCalories;
@@ -17,12 +18,5 @@ abstract class Food {
     public int getCost(){
         return intCost;
     }
-
-    public void addToOrder(){
-        listOfFoods.add(this);
-    }
-    public void removeFromOrder(){
-        
-
-    }
 }
+
