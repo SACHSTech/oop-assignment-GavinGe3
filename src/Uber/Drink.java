@@ -1,6 +1,6 @@
 package Uber;
 
-public abstract class Drink {
+public class Drink {
     private String strItemName;
     private String strSize;
     private int intCost;

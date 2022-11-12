@@ -6,7 +6,8 @@ public class Main {
 
         // Intialize Menu
 
-        Food Bigmac = new Food(Bigmac, 6.99, 500, 13);
+        Food Bigmac = new Food("Bigmac", 6.99, 500, 13);
+        
 
     }
 }
