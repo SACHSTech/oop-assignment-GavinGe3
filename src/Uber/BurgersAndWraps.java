@@ -10,7 +10,7 @@ public class BurgersAndWraps extends Food {
     
     public BurgersAndWraps(String newFood, double newCost, int newCalories, int newMenuNumber, boolean newWrap, boolean newBurger, String newMeat, int newNumPatties, 
     boolean newExtraMeat, String[] newToppings){
-        
+
         super(newFood, newCost, newCalories, newMenuNumber);
         isWrap = newWrap;
         isBurger = newBurger;

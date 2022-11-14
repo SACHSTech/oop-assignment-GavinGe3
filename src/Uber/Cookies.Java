@@ -11,4 +11,7 @@ public class Cookies extends Food{
         sugarContent = newSugar;
         hasNuts = newHasnuts;
     }
+    public void setNumber(int setNumber){
+        number = setNumber;
+    }
 }

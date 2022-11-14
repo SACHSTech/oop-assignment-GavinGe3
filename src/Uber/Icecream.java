@@ -1,6 +1,6 @@
 package Uber;
 
-public class Icecream extends food{
+public class Icecream extends Food{
 
     boolean withCone;
     int sugarContent;
