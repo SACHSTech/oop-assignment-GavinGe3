@@ -3,11 +3,11 @@ package Uber;
 public class Drink {
     private String strItemName;
     private String strSize;
-    private int intCost;
+    private double intCost;
     private int intCalories;
     private int menuNumber;
     
-    public Drink(String newName, String newSize, int newCost, int newCalories, int newMenuNumber){
+    public Drink(String newName, String newSize, double newCost, int newCalories, int newMenuNumber){
         strItemName = newName;
         strSize = newSize;
         intCost = newCost;

@@ -13,8 +13,12 @@ public  class Food{
         menuNumber = newMenuNumber;
     }
 
-    public  double getCost(){
+    public double getCost(){
         return intCost;
+    }
+
+    public void setCost(double cost){
+        intCost = cost;
     }
 }
 

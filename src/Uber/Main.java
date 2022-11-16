@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Welcome to BigDonalds, the best fast food in the business.");
         System.out.println("Here is the preview of our menu.");
         
-        System.out.println(newMenu.toString());
+        newMenu.getInfo();
 
     }
 }

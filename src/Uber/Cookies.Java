@@ -5,11 +5,11 @@ public class Cookies extends Food{
     int sugarContent;
     boolean hasNuts;
 
-    public Cookies(String newFood, double newCost, int newCalories, int newMenuNumber, int newNumber, int newSugar, boolean, newHasNuts){
+    public Cookies(String newFood, double newCost, int newCalories, int newMenuNumber, int newNumber, int newSugar, boolean newHasNuts){
         super(newFood, newCost, newCalories, newMenuNumber);
         number = newNumber;
         sugarContent = newSugar;
-        hasNuts = newHasnuts;
+        hasNuts = newHasNuts;
     }
     public void setNumber(int setNumber){
         number = setNumber;
