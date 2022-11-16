@@ -5,9 +5,8 @@ public class Coffee extends Drink{
     int mgCaffeine;
     int percentMilk;
 
-    public Coffee(String newName, String newSize, int newCost, int newCalories, int newMenuNumber, int newCaffeine, String newFlavor, int mgCaffeine, int newMilk){
+    public Coffee(String newName, String newSize, double newCost, int newCalories, int newMenuNumber, int newCaffeine, int newMilk){
         super(newName, newSize, newCost, newCalories, newMenuNumber);
-        flavor = newFlavor;
         mgCaffeine = newCaffeine;
         percentMilk = newMilk;
     }
