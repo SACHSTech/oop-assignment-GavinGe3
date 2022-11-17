@@ -16,7 +16,6 @@ public abstract class Food{
     public double getCost(){
         return intCost;
     }
-
     public String getName(){
         return strItemName;
     }
@@ -36,6 +35,8 @@ public abstract class Food{
         return intCalories;
     }
 
-    public abstract String getInfo();
+    public abstract void getInfo();
+
+    public abstract void setInfo();
 }
 

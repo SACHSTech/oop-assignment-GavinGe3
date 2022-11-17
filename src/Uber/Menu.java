@@ -4,13 +4,12 @@ import java.util.*;
 
 public class Menu{
     
-    ArrayList<Food> listOfFoods = new ArrayList<Food>();
-    ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
-    ArrayList<String> toppings = new ArrayList<String>();
+    private ArrayList<Food> listOfFoods = new ArrayList<Food>();
+    private ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
 
-    BurgersAndWraps burger = new BurgersAndWraps("Burger", 6.99, 450, 1, false, true, "beef", 2, false);
+    BurgersAndWraps burger = new BurgersAndWraps("Burger", 6.99, 450, 1, false, true, "beef", 1, false);
     BurgersAndWraps wrap = new BurgersAndWraps("Wrap", 7.99, 500, 
-    2, true, false, "chicken", 0, true);
+    2, true, false, "chicken", 0, false);
 
     Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50, false);
     //Fries mediumFries = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);
@@ -25,18 +24,19 @@ public class Menu{
     Cookies chocolateChip = new Cookies("Chocolate Chip Cookies", 1.00, 150, 7, 0, 15, false);
     Cookies oatmeal = new Cookies("Oatmeal Cookies", 1.00, 125, 8, 0, 5, false);   
 
-    Icecream chocIcecream = new Icecream("Icecream", 2.00, 300, 13, false, 50, "chocolate");
-    Icecream vanillaIcecream = new Icecream("Icecream", 2.00, 300, 13, false, 50, "vanilla");
-    Icecream GTIcecream = new Icecream("Icecream", 2.00, 300, 13, false, 50, "green tea");
+    Icecream chocIcecream = new Icecream("Chocolate Icecream", 2.00, 300, 9, false, 50, "chocolate");
+    Icecream vanillaIcecream = new Icecream("Vanilla Icecream", 2.00, 300, 10, false, 50, "vanilla");
+    Icecream GTIcecream = new Icecream("Green Tea Icecream", 2.00, 300, 11, false, 50, "green tea");
 
-    Coffee expresso = new Coffee("Expresso", "", 0.00, 0, 15, 0, 0);
-    Coffee cappucino = new Coffee("Cappucino", "", 0.00, 0, 16, 0,0);
-    Coffee latte = new Coffee("Latte", "", 0.00, 0, 17, 0, 0 );
+    Coffee expresso = new Coffee("Expresso", "", 0.00, 0, 12, 0, 0);
+    Coffee cappucino = new Coffee("Cappucino", "", 0.00, 0, 13, 0,0);
+    Coffee latte = new Coffee("Latte", "", 0.00, 0, 14, 0, 0 );
 
-    Soda soda = new Soda("coke", "small", 1.99, 120, 18, 15, false);
+    Soda soda = new Soda("Soda", "small", 1.99, 120, 15, 15);
 
     public Menu(){
         // Add Foods
+        listOfFoods.add(burger);
         listOfFoods.add(wrap);
         listOfFoods.add(fries);
         listOfFoods.add(poutine);
@@ -47,7 +47,6 @@ public class Menu{
         listOfFoods.add(chocIcecream);
         listOfFoods.add(vanillaIcecream);
         listOfFoods.add(GTIcecream);
-
 
         // Add Drinks
         listOfDrinks.add(expresso);
@@ -66,5 +65,12 @@ public class Menu{
         for (int i = 0; i < listOfDrinks.size(); i++){
             System.out.println(listOfDrinks.get(i));
         }
+    }
+
+    public Food getFood(int i){
+        return listOfFoods.get(i);
+    }
+    public Drink getDrink(int i){
+        return listOfDrinks.get(i);
     }
 }

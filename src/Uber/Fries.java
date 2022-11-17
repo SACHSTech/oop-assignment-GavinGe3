@@ -1,4 +1,5 @@
 package Uber;
+import java.util.*;
 
 public class Fries extends Food {
     String size;
@@ -12,7 +13,13 @@ public class Fries extends Food {
         isPoutine = newIsPoutine;
     }
 
-    public void setInfo(String newSize){
+    public void setInfo(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the size of your fries (small, medium, or large): ");
+        String newSize = scanner.nextLine();
+
         size = newSize;
         if (size == "small"){
             this.setCalories(150);
@@ -26,10 +33,13 @@ public class Fries extends Food {
         if (size == "large"){
             this.setCalories(450);
             saltContent = 30;
-
         }
     }
-    public String getInfo(){
-        return size + "Fries have " + saltContent + "grams of salt and " + getCalories() + "calories.";
+    public void getInfo(){
+        System.out.println("Name: " + getName());
+        System.out.println("Cost: " + getCost());
+        System.out.println("Calories: " + getCalories()); 
+        System.out.println("Salt (g): " + saltContent);
+        System.out.println("Size (g): " + size);
     }
 }

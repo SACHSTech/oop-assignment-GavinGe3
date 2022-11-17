@@ -1,4 +1,5 @@
 package Uber;
+import java.util.*;
 
 public class Cookies extends Food{
     int number;
@@ -11,7 +12,23 @@ public class Cookies extends Food{
         sugarContent = newSugar;
         hasNuts = newHasNuts;
     }
-    public void setNumber(int setNumber){
+    public void setInfo(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter the number of cookies you want: ");
+        int setNumber = scanner.nextInt();
         number = setNumber;
+
+        setCost(getCost() * number);
+        setCalories(number * getCalories());
+    }
+
+   
+    public void getInfo(){
+        System.out.println("Name: " + getName());
+        System.out.println("Cost: " + getCost());
+        System.out.println("Calories: " + getCalories()); 
+        System.out.println("Salt (g): " + sugarContent);
+        System.out.println("Amount: " + number);
     }
 }
