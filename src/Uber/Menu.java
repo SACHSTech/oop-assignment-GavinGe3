@@ -8,22 +8,22 @@ public class Menu{
     ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
     ArrayList<String> toppings = new ArrayList<String>();
 
-    Food Bigmac = new Food("Bigmac", 6.99, 500, 13);
-    BurgersAndWraps chickenWrap = new BurgersAndWraps("Chicken Wrap", 7.99, 500, 
-    12, true, false, "chicken", 2, true, toppings);
+    BurgersAndWraps burger = new BurgersAndWraps("Burger", 6.99, 450, 1, false, true, "beef", 2, false);
+    BurgersAndWraps wrap = new BurgersAndWraps("Wrap", 7.99, 500, 
+    2, true, false, "chicken", 0, true);
 
-    Fries smallFries = new Fries("Fries", 1.99, 200, 3 , "small", 50, false);
-    Fries mediumFries = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);
-    Fries largeFries = new Fries("Fries", 2.99, 500, 3 , "large", 200, false);
+    Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50, false);
+    //Fries mediumFries = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);
+    //Fries largeFries = new Fries("Fries", 2.99, 500, 3 , "large", 200, false);
 
-    Fries mediumPoutine = new Fries("Poutine", 4.99, 700, 4, "medium", 125, true);
-    Fries largePoutine = new Fries("Poutine", 6.99, 1000, 4, "Large", 200, true);
+    Fries poutine = new Fries("Poutine", 4.99, 700, 4, "medium", 125, true);
+    //Fries largePoutine = new Fries("Poutine", 6.99, 1000, 4, "Large", 200, true);
 
-    Wings buffaloWings = new Wings("Bufallo Wings", 0.75, 75, 10, 7, 0, false);
-    Wings honeyGarlicWings = new Wings("Honey Garlic Wings", 0.75, 75, 10, 7, 0, false);
+    Wings buffaloWings = new Wings("Bufallo Wings", 0.75, 75, 5, 7, 0, false);
+    Wings honeyGarlicWings = new Wings("Honey Garlic Wings", 0.75, 75, 6, 7, 0, false);
 
-    Cookies chocolateChip = new Cookies("Chocolate Chip Cookies", 1.00, 150, 11, 0, 15, false);
-    Cookies oatmeal = new Cookies("Oatmeal Cookies", 1.00, 125, 12, 0, 5, false);   
+    Cookies chocolateChip = new Cookies("Chocolate Chip Cookies", 1.00, 150, 7, 0, 15, false);
+    Cookies oatmeal = new Cookies("Oatmeal Cookies", 1.00, 125, 8, 0, 5, false);   
 
     Icecream chocIcecream = new Icecream("Icecream", 2.00, 300, 13, false, 50, "chocolate");
     Icecream vanillaIcecream = new Icecream("Icecream", 2.00, 300, 13, false, 50, "vanilla");
@@ -36,20 +36,35 @@ public class Menu{
     Soda soda = new Soda("coke", "small", 1.99, 120, 18, 15, false);
 
     public Menu(){
-        listOfFoods.add(Bigmac);
-        listOfFoods.add(chickenWrap);
-        listOfFoods.add(smallFries);
-        listOfFoods.add(mediumPoutine);
+        // Add Foods
+        listOfFoods.add(wrap);
+        listOfFoods.add(fries);
+        listOfFoods.add(poutine);
         listOfFoods.add(buffaloWings);
+        listOfFoods.add(honeyGarlicWings);
+        listOfFoods.add(chocolateChip);
+        listOfFoods.add(oatmeal);
+        listOfFoods.add(chocIcecream);
+        listOfFoods.add(vanillaIcecream);
+        listOfFoods.add(GTIcecream);
+
+
+        // Add Drinks
+        listOfDrinks.add(expresso);
+        listOfDrinks.add(cappucino);
+        listOfDrinks.add(latte);
+        listOfDrinks.add(soda);
 
     }
 
     public void getInfo(){
+        System.out.println("---Foods---");
         for (int i=0; i< listOfFoods.size(); i++){
-            System.out.println("Foods:" + listOfFoods.get(i).getCost());
-
-            
-
+            System.out.println(listOfFoods.get(i));
+        }
+        System.out.println("---Drinks---");
+        for (int i = 0; i < listOfDrinks.size(); i++){
+            System.out.println(listOfDrinks.get(i));
         }
     }
 }

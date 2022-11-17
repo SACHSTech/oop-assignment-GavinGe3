@@ -1,6 +1,6 @@
 package Uber;
 
-public  class Food{
+public abstract class Food{
     private String strItemName;
     private double intCost;
     private int intCalories;
@@ -17,8 +17,25 @@ public  class Food{
         return intCost;
     }
 
+    public String getName(){
+        return strItemName;
+    }
+
+    public String toString(){
+        return menuNumber + " - " + strItemName;
+    }
+
     public void setCost(double cost){
         intCost = cost;
     }
+
+    public void setCalories(int newCalories){
+        intCalories = newCalories;
+    }
+    public int getCalories(){
+        return intCalories;
+    }
+
+    public abstract String getInfo();
 }
 
