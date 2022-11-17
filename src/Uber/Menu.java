@@ -12,7 +12,7 @@ public class Menu{
     2, true, false, "chicken", 0, false);
 
     Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50, false);
-    //Fries mediumFries = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);
+    Fries blank = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);
     //Fries largeFries = new Fries("Fries", 2.99, 500, 3 , "large", 200, false);
 
     Fries poutine = new Fries("Poutine", 4.99, 700, 4, "medium", 125, true);
@@ -36,6 +36,7 @@ public class Menu{
 
     public Menu(){
         // Add Foods
+        listOfFoods.add(blank);
         listOfFoods.add(burger);
         listOfFoods.add(wrap);
         listOfFoods.add(fries);
@@ -58,7 +59,7 @@ public class Menu{
 
     public void getInfo(){
         System.out.println("---Foods---");
-        for (int i=0; i< listOfFoods.size(); i++){
+        for (int i = 1; i < listOfFoods.size(); i++){
             System.out.println(listOfFoods.get(i));
         }
         System.out.println("---Drinks---");
@@ -71,6 +72,6 @@ public class Menu{
         return listOfFoods.get(i);
     }
     public Drink getDrink(int i){
-        return listOfDrinks.get(i);
+        return listOfDrinks.get((i-12));
     }
 }

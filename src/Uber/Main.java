@@ -9,24 +9,28 @@ public class Main {
 
         // Intialize Menu
         
-        ArrayList<Food> newFoods = new ArrayList<Food>();
-        int totalCost = 0;
-        Customer newCustomer = new Customer("as", 2,"a",5,"d");
-
         Menu newMenu = new Menu();
+        Order newOrder = new Order();
 
-        Order newOrder = new Order(newFoods, totalCost, newCustomer);
 
         System.out.println("Welcome to BigDonalds, the best fast food in the business.");
         System.out.println("Here is the preview of our menu.");
+
+        while(true){
+            newMenu.getInfo();
+
+            System.out.println("Enter the Menu Number of your desired item.");
+            int currentOrder = scanner.nextInt();
+
+            if (currentOrder < 12){
+                newMenu.getFood(currentOrder).setInfo();
+                newOrder.addFoodToOrder(newMenu.getFood(currentOrder));
+            }
+            if (currentOrder > 11){
+                newMenu.getDrink(currentOrder).setInfo();
+                newOrder.addDrinkToOrder(newMenu.getDrink(currentOrder));
+            }
+        }
         
-        newMenu.getInfo();
-
-        System.out.println("Enter the Menu Number of your desired item.");
-        int currentOrder = scanner.nextInt();
-
-        newMenu.getFood(currentOrder).setInfo();
-
-
     }
 }
