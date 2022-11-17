@@ -7,9 +7,9 @@ public class Menu{
     private ArrayList<Food> listOfFoods = new ArrayList<Food>();
     private ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
 
-    BurgersAndWraps burger = new BurgersAndWraps("Burger", 6.99, 450, 1, false, true, "beef", 1, false);
+    BurgersAndWraps burger = new BurgersAndWraps("Burger", 6.99, 450, 1, false, true, "beef", 1, false,"");
     BurgersAndWraps wrap = new BurgersAndWraps("Wrap", 7.99, 500, 
-    2, true, false, "chicken", 0, false);
+    2, true, false, "chicken", 0, false,"");
 
     Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50, false);
     Fries blank = new Fries("Fries", 2.49, 350, 3 , "medium", 100, false);

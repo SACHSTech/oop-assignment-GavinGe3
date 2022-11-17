@@ -11,22 +11,16 @@ public class Coffee extends Drink{
         percentMilk = newMilk;
     }
 
-    public void getInfo(){
-        System.out.println("Name: " + getName());
-        System.out.println("Cost: " + getCost());
-        System.out.println("Calories: " + getCalories()); 
-        System.out.println("Caffeine (mg): " + mgCaffeine);
-        System.out.println("Milk%: " + percentMilk);
-        System.out.println("Size: " + getSize());
-    }
-
     public void setInfo(){
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What size of drink you want? (small, medium or large)");
+        System.out.println("What size of drink you want? (small, medium or large): ");
+
         String newSize = scanner.nextLine();
-        if (newSize == "small"){
+        if (newSize.equalsIgnoreCase("small")){
             setSize(newSize);
             setCost(1.99);
+            mgCaffeine = 20;
         }
         if (newSize == "medium"){
             setSize(newSize);
@@ -37,8 +31,15 @@ public class Coffee extends Drink{
             setSize(newSize);
             setCost(3.49);
             mgCaffeine *= 2;
-
         }
+    }
+    public void getInfo(){
+        System.out.println("Name: " + getName());
+        System.out.println("Cost: " + getCost());
+        System.out.println("Calories: " + getCalories()); 
+        System.out.println("Caffeine (mg): " + mgCaffeine);
+        System.out.println("Milk%: " + percentMilk);
+        System.out.println("Size: " + getSize());
     }
     
 }

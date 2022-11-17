@@ -33,7 +33,7 @@ public abstract class Drink {
     public void setCost(double cost){
         intCost = cost;
     }
-
+    
     public void setCalories(int newCalories){
         intCalories = newCalories;
     }

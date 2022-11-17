@@ -8,10 +8,11 @@ public class BurgersAndWraps extends Food {
     private String meat;
     private int numPatties;
     private boolean isCombo;
+    private String extras;
     
     
     public BurgersAndWraps(String strNewFood, double newCost, int newCalories, int newMenuNumber, boolean newWrap, boolean newBurger, String newMeat, int newNumPatties,
-    boolean newIsCombo){
+    boolean newIsCombo, String newExtras){
 
         super(strNewFood, newCost, newCalories, newMenuNumber);
         isWrap = newWrap;
@@ -19,13 +20,13 @@ public class BurgersAndWraps extends Food {
         meat = newMeat;
         numPatties = newNumPatties;
         isCombo = newIsCombo;
+        extras = newExtras;
     }
 
     public void setInfo(){
         Scanner scanner = new Scanner(System.in);
         
         if (isBurger){
-
             System.out.println("Enter the type of meat you want (Chicken or Beef): ");
             String newMeat = scanner.nextLine();
             meat = newMeat;
@@ -42,12 +43,14 @@ public class BurgersAndWraps extends Food {
             meat = newMeat;
         }
 
-        System.out.println("Do you want this to be a combo? (true or false): ");
+        System.out.println("Do you want this to be a combo? (true or false) (Includes medium fries and soda): ");
         boolean newIsCombo = scanner.nextBoolean();
         isCombo = newIsCombo;
         
         if (isCombo){
             this.setCost(this.getCost() + 2.5);
+            System.out.println("Enter type of Soda: ");
+            extras = scanner.nextLine();
         }
     }
 
@@ -56,8 +59,10 @@ public class BurgersAndWraps extends Food {
             System.out.println("Name: " + getName());
             System.out.println("Calories: " + getCalories()); 
             System.out.println("Meat: " + meat);
+            System.out.println("Cost: " + getCost());
             if (isCombo){
                 System.out.println("Combo: yes");
+                System.out.println("Includes: " + extras + "fries.");
             }
             else{
                 System.out.println("Combo: no");
@@ -69,6 +74,7 @@ public class BurgersAndWraps extends Food {
             System.out.println("Calories: " + getCalories()); 
             System.out.println("Meat: " + meat);
             System.out.println("Patties:" + numPatties);
+            System.out.println("Cost: " + getCost());
             if (isCombo){
                 System.out.println("Combo: yes");
             }
