@@ -11,4 +11,25 @@ public class Fries extends Food {
         saltContent = newSalt;
         isPoutine = newIsPoutine;
     }
+
+    public void setInfo(String newSize){
+        size = newSize;
+        if (size == "small"){
+            this.setCalories(150);
+            saltContent = 10;
+        }
+        if (size == "medium"){
+            this.setCalories(300);
+            saltContent = 20;
+
+        }
+        if (size == "large"){
+            this.setCalories(450);
+            saltContent = 30;
+
+        }
+    }
+    public String getInfo(){
+        return size + "Fries have " + saltContent + "grams of salt and " + getCalories() + "calories.";
+    }
 }
