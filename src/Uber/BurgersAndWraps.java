@@ -1,6 +1,7 @@
 package Uber;
 import java.util.*;
 
+
 public class BurgersAndWraps extends Food {
     private boolean isWrap;
     private boolean isBurger;
@@ -20,24 +21,60 @@ public class BurgersAndWraps extends Food {
         isCombo = newIsCombo;
     }
 
-    public void setInfo(int newNumPatties, String typeMeat, boolean newIsCombo){
-        numPatties = newNumPatties;
-        meat = typeMeat;
+    public void setInfo(){
+        Scanner scanner = new Scanner(System.in);
+        
         if (isBurger){
-            this.setCalories(300 + newNumPatties * 150);
+
+            System.out.println("Enter the type of meat you want (Chicken or Beef): ");
+            String newMeat = scanner.nextLine();
+            meat = newMeat;
+
+            System.out.println("Enter the number of patties you want: ");
+            int newPatties = scanner.nextInt();
+            numPatties = newPatties;
+
+            this.setCalories(300 + numPatties * 150);
         }
+        if (isWrap){
+            System.out.println("Enter the type of meat you want (Chicken or Beef): ");
+            String newMeat = scanner.nextLine();
+            meat = newMeat;
+        }
+
+        System.out.println("Do you want this to be a combo? (true or false): ");
+        boolean newIsCombo = scanner.nextBoolean();
+        isCombo = newIsCombo;
+        
         if (isCombo){
             this.setCost(this.getCost() + 2.5);
         }
     }
 
-    public String getInfo(){
+    public void getInfo(){
         if (isWrap){
-            return meat + "wrap has" + this.getCalories() + " calories.";
+            System.out.println("Name: " + getName());
+            System.out.println("Calories: " + getCalories()); 
+            System.out.println("Meat: " + meat);
+            if (isCombo){
+                System.out.println("Combo: yes");
+            }
+            else{
+                System.out.println("Combo: no");
+            }
+            
         }
         if (isBurger){
-            return meat + "burger with " + numPatties + " patties has" + this.getCalories() + " calories.";
+            System.out.println("Name: " + getName());
+            System.out.println("Calories: " + getCalories()); 
+            System.out.println("Meat: " + meat);
+            System.out.println("Patties:" + numPatties);
+            if (isCombo){
+                System.out.println("Combo: yes");
+            }
+            else{
+                System.out.println("Combo: no");
+            }
         }
-        return "cool";
     }
 }
