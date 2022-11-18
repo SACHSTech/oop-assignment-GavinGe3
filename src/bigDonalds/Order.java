@@ -1,35 +1,34 @@
-package Uber;
+package bigDonalds;
 import java.util.*;
 
 public class Order {
-    private double totalCost;
+    private double dblSubtotal;
+    private double dblTotal;
     private Customer customer;
     private ArrayList<Food> listOfFoods = new ArrayList<Food>();
     private ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
 
     public Order(){
-        ArrayList<Food> listOfFoods = new ArrayList<Food>();
-        ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
         Customer newCustomer = new Customer();
         customer = newCustomer;
-        double totalCost;
+        
     }
 
     public void addFoodToOrder(Food newFood){
         listOfFoods.add(newFood);
-        totalCost += newFood.getCost();
+        dblSubtotal += newFood.getCost();
     }
 
     public void addDrinkToOrder(Drink newDrink){
         listOfDrinks.add(newDrink);
-        totalCost += newDrink.getCost();
+        dblSubtotal += newDrink.getCost();
     }
 
     public double getCost(){
-        return totalCost;
+        return dblSubtotal;
     }
 
-    public void getOrder(int intFoods, int intDrinks){
+    public void showOrder(int intFoods, int intDrinks){
         System.out.println("-----Order Summary-----");
         System.out.println();
 
@@ -44,14 +43,18 @@ public class Order {
             System.out.println();
         }
 
-        System.out.println("Your subtotal is: " + totalCost);
+        System.out.println("Your subtotal is: $" + Math.round(dblSubtotal * 100.0) / 100.0);
+        dblTotal = (dblSubtotal + 5) * 1.13;
+        System.out.println("Your total with tax and delivery ($5) is: $" + Math.round(dblTotal * 100.0) / 100.0);
     }
 
     public void checkOut(){
 
         Scanner scanner = new Scanner(System.in);
 
-        this.getOrder(listOfFoods.size(), listOfDrinks.size());
+        this.showOrder(listOfFoods.size(), listOfDrinks.size());
+
+        System.out.println("Enter your personal information to complete your order.");
 
         customer.setInfo();
 

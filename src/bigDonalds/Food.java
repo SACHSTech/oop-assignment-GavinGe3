@@ -1,20 +1,20 @@
-package Uber;
+package bigDonalds;
 
 public abstract class Food{
     private String strItemName;
-    private double intCost;
+    private double dblCost;
     private int intCalories;
     private int menuNumber;
 
     public Food(String newFood, double newCost, int newCalories, int newMenuNumber){
         strItemName = newFood;
-        intCost = newCost;
+        dblCost = newCost;
         intCalories = newCalories;
         menuNumber = newMenuNumber;
     }
 
     public double getCost(){
-        return intCost;
+        return dblCost;
     }
     public String getName(){
         return strItemName;
@@ -25,7 +25,7 @@ public abstract class Food{
     }
 
     public void setCost(double cost){
-        intCost = cost;
+        dblCost = cost;
     }
 
     public void setCalories(int newCalories){

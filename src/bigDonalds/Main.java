@@ -1,13 +1,10 @@
-package Uber;
+package bigDonalds;
 import java.io.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException{
-
-        Scanner scanner = new Scanner(System.in);
-
-        // Intialize Menu
+        // Intialize Menu and variables
         
         Menu newMenu = new Menu();
         Order newOrder = new Order();
@@ -25,25 +22,27 @@ public class Main {
             System.out.println("Enter the Menu Number of your desired item.");
             int currentOrder = scanner.nextInt();
 
-            if (currentOrder < 12){
+            if (currentOrder < 11){
                 newMenu.getFood(currentOrder).setInfo();
                 newOrder.addFoodToOrder(newMenu.getFood(currentOrder));
                 numFoods += 1;
             }
-            if (currentOrder > 11){
+            if (currentOrder > 10){
                 newMenu.getDrink(currentOrder).setInfo();
                 newOrder.addDrinkToOrder(newMenu.getDrink(currentOrder));
                 numDrinks += 1;
             }
 
-            newOrder.getOrder(numFoods, numDrinks);
+            newOrder.showOrder(numFoods, numDrinks);
 
-            System.out.println("Enter 0 to complete your order. Enter 1 to continue ordering");
+            System.out.println("Enter 0 to complete your order. Enter any other number to continue ordering.");
             int continueOrder = scanner.nextInt();
+
             if (continueOrder == 0){
+                System.out.println();
+                newOrder.checkOut();
                 break;
             }
-
         }
     }
 }
