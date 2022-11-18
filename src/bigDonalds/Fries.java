@@ -1,24 +1,47 @@
 package bigDonalds;
 import java.util.*;
 
+/**
+ * Fries class file - extends abstract Food class
+ * @author G. Ge
+ * 
+ */
+
 public class Fries extends Food {
+    // Instance variables
     String strSize;
     int intSaltContent;
 
-    public Fries(String newFood, double newCost, int newCalories, int newMenuNumber, String newstrSize, int newSalt){
-        super(newFood, newCost, newCalories, newMenuNumber);
-        strSize = newstrSize;
-        intSaltContent = newSalt;
+    /**
+     * Constructor method for food
+     * 
+     * @param strNewFood - name of food
+     * @param intNewCost - cost of fries
+     * @param intNewCalories - calories of fries
+     * @param intNewMenNumber - The number of this food on the menu, used to identify the food
+     * @param strNewSize - size of fries
+     * @param intNewSalt - amount of salt in fries (g)
+     */
+
+    public Fries(String strNewFood, double intNewCost, int intNewCalories, int intNewMenNumber, String strNewSize, int intNewSalt){
+        super(strNewFood, intNewCost, intNewCalories, intNewMenNumber);
+        strSize = strNewSize;
+        intSaltContent = intNewSalt;
     }
 
+    /**
+     * Allows the user to set options of the fries
+     */
     public void setInfo(){
 
         Scanner scanner = new Scanner(System.in);
 
+        // Allow user to enter size of fries
         System.out.println("Enter the strSize of your fries (small, medium, or large): ");
-        String newstrSize = scanner.nextLine();
+        String strNewSize = scanner.nextLine();
+        strSize = strNewSize;
 
-        strSize = newstrSize;
+        // Change attributes of fries based on user choice
         if (strSize == "small"){
             this.setCalories(150);
             intSaltContent = 10;
@@ -33,7 +56,12 @@ public class Fries extends Food {
             intSaltContent = 30;
         }
     }
-    public void getInfo(){
+
+    /**
+     * Displays info of fries to screen
+     * 
+     */
+    public void showInfo(){
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 

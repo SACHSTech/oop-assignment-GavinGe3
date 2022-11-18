@@ -1,41 +1,75 @@
 package bigDonalds;
 import java.util.*;
 
+/**
+ * Subclass of Drink that denotes coffee
+ * @author G. Ge
+ * 
+ */
+
 public class Coffee extends Drink{
     private int intMgCaffeine;
     private int intPercentMilk;
 
-    public Coffee(String newName, String newSize, double newCost, int newCalories, int newMenuNumber, int newCaffeine, int newMilk){
-        super(newName, newSize, newCost, newCalories, newMenuNumber);
-        intMgCaffeine = newCaffeine;
-        intPercentMilk = newMilk;
+    /**
+     * Constructor - creates an instance of coffee class
+     * 
+     * @param strNewName - name of coffee
+     * @param strNewSize - size of coffee
+     * @param dblNewCost - cost of coffee
+     * @param intNewCalories - calories of the coffee
+     * @param intNewMenuNumber - The number of this drink on the menu, used to identify the drink
+     * @param intNewCaffeine - mg of caffeine
+     * @param intNewMilk - %milk 
+     */
+
+    public Coffee(String strNewName, String strNewSize, double dblNewCost, int intNewCalories, int intNewMenuNumber, int intNewCaffeine, int intNewMilk){
+        super(strNewName, strNewSize, dblNewCost, intNewCalories, intNewMenuNumber);
+        intMgCaffeine = intNewCaffeine;
+        intPercentMilk = intNewMilk;
     }
 
+    /**
+     * Allows user to customize their coffee
+     * 
+     */
     public void setInfo(){
+
+        // Prompts user to set the size of their coffee
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("What size of drink do you want? (small, medium or large): ");
+        String strNewSize = scanner.nextLine();
 
-        String newSize = scanner.nextLine();
-        if (newSize.equalsIgnoreCase("small")){
-            setSize(newSize);
+        // If size is small set size to small and adjust coffee variables
+        if (strNewSize.equalsIgnoreCase("small")){
+            setSize(strNewSize);
             setCost(1.99);
             intMgCaffeine = 20;
         }
-        if (newSize.equalsIgnoreCase("medium")){
-            setSize(newSize);
+
+        // If size is small set size to small and adjust coffee variables
+        if (strNewSize.equalsIgnoreCase("medium")){
+            setSize(strNewSize);
             setCost(2.49);
             setCalories(getCalories() * 1.5);
             intMgCaffeine *= 1.5;
         }
-        if (newSize.equalsIgnoreCase("medium")){
-            setSize(newSize);
+
+        // If size is small set size to small and adjust coffee variables
+        if (strNewSize.equalsIgnoreCase("medium")){
+            setSize(strNewSize);
             setCost(3.49);
             setCalories(getCalories() * 2);
             intMgCaffeine *= 2;
         }
     }
-    public void getInfo(){
+
+    /**
+     * Displays info of the coffee to the screen
+     * 
+     */
+    public void showInfo(){
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
