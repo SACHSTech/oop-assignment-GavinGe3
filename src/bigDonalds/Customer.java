@@ -11,6 +11,7 @@ public class Customer {
     public Customer(){
     }
 
+   
     public void setInfo(){
 
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +22,7 @@ public class Customer {
         double newdblPhoneNumber;
         String newstrEmail;
 
-        System.out.print("Enter your strAddress: ");
+        System.out.print("Enter your Address: ");
         newstrAddress = scanner.nextLine();
         strAddress = newstrAddress;
 
@@ -29,7 +30,7 @@ public class Customer {
         newintPaymentInfo = Integer.parseInt(scanner.nextLine());
         intPaymentInfo = newintPaymentInfo;
 
-        System.out.print("Enter your strName: ");
+        System.out.print("Enter your Name: ");
         newstrName = scanner.nextLine();
         strName = newstrName;
 
@@ -37,7 +38,7 @@ public class Customer {
         newdblPhoneNumber = Double.parseDouble(scanner.nextLine());
         dblPhoneNumber = newdblPhoneNumber;
 
-        System.out.print("Enter your strEmail: ");
+        System.out.print("Enter your Email: ");
         newstrEmail = scanner.nextLine();
         strEmail = newstrEmail;
         }

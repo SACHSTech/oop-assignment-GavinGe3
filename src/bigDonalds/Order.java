@@ -9,8 +9,6 @@ public class Order {
     private ArrayList<Drink> listOfDrinks = new ArrayList<Drink>();
 
     public Order(){
-        Customer newCustomer = new Customer();
-        customer = newCustomer;
         
     }
 
@@ -24,6 +22,16 @@ public class Order {
         dblSubtotal += newDrink.getCost();
     }
 
+    public void removeFoodFromOrder(int i){
+        dblSubtotal -= listOfFoods.get(i).getCost();
+        listOfFoods.remove(i);
+
+    }
+    public void removeDrinkFromOrder(int i){
+        dblSubtotal -= listOfDrinks.get(i).getCost();
+        listOfDrinks.remove(i);
+        
+    }
     public double getCost(){
         return dblSubtotal;
     }
@@ -32,7 +40,7 @@ public class Order {
         System.out.println("-----Order Summary-----");
         System.out.println();
 
-        for (int i = 0;i < intFoods; i++){
+        for (int i = 0; i < intFoods; i++){
             System.out.println("---Food Item " + (i + 1) + "---");
             listOfFoods.get(i).getInfo();
             System.out.println();
