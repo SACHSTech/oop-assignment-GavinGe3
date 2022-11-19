@@ -55,10 +55,10 @@ public class Wings extends Food {
             boolBreaded = true;
             setCalories(intNumber * 100);
         }
-        if (isboolBreaded.equalsIgnoreCase("no")){
+        else if (isboolBreaded.equalsIgnoreCase("no")){
             setCalories(intNumber * 75);
         }
-
+        
         // Changes cost of wings based on amount
         this.setCost(intNumber * this.getCost());
     }
@@ -73,7 +73,7 @@ public class Wings extends Food {
         System.out.println("Calories: " + getCalories()); 
         System.out.println("Salt (g): " + intSaltContent);
         System.out.println("Amount: " + intNumber);
-        System.out.println("boolBreaded: " + boolBreaded);
+        System.out.println("Breaded: " + boolBreaded);
     }
 }
 

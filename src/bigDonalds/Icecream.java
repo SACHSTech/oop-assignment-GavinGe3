@@ -61,7 +61,7 @@ public class Icecream extends Food{
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
         System.out.println("Sugar (g): " + intSugarContent);
-        System.out.println("With Cone?: " + withCone);
+        System.out.println("Has Cone: " + withCone);
     }
 }
     

@@ -66,6 +66,6 @@ public class Fries extends Food {
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
         System.out.println("Salt (g): " + intSaltContent);
-        System.out.println("strSize (g): " + strSize);
+        System.out.println("Size (g): " + strSize);
     }
 }

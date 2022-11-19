@@ -105,7 +105,7 @@ public class BurgersAndWraps extends Food {
             // Display info about the food
             System.out.println("Name: " + getName());
             System.out.println("Calories: " + getCalories()); 
-            System.out.println("strMeat: " + strMeat);
+            System.out.println("Meat: " + strMeat);
             System.out.println("Cost: $" + getCost());
             if (boolIsCombo){
                 System.out.println("Combo: yes");
@@ -122,7 +122,7 @@ public class BurgersAndWraps extends Food {
             // Display info about the food
             System.out.println("Name: " + getName());
             System.out.println("Calories: " + getCalories()); 
-            System.out.println("strMeat: " + strMeat);
+            System.out.println("Meat: " + strMeat);
             System.out.println("Patties: " + intNumPatties);
             System.out.println("Cost: $" + getCost());
             if (boolIsCombo){

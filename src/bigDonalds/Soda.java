@@ -34,7 +34,7 @@ public class Soda extends Drink{
         System.out.println("Size: " + getSize());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("intSugar (g): " + intSugar);
+        System.out.println("Sugar (g): " + intSugar);
     }
 
     /**
