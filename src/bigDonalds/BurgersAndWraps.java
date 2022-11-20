@@ -16,6 +16,7 @@ public class BurgersAndWraps extends Food {
     private boolean boolIsCombo;
     private String strExtras;
     
+    
     /**
      * Constructor to create a Burger or Wrap
      * @param strNewFood - Name of this Burger or Wrap
@@ -40,6 +41,9 @@ public class BurgersAndWraps extends Food {
         intNumPatties = intNewNumPatties;
         boolIsCombo = boolNewIsCombo;
         strExtras = strNewExtras;
+        Fries newFries = new Fries("Fries", 1.99, 200, 3 , "small", 50);
+        Soda newSoda = new Soda("Soda", "small", 1.99, 120, 14, 15);
+    
     }
 
     /**
@@ -90,6 +94,7 @@ public class BurgersAndWraps extends Food {
             this.setCost(this.getCost() + 2.5);
             System.out.println("Enter brand of Soda: ");
             strExtras = scanner.nextLine();
+            setCalories(300 + intNumPatties * 150 + 420);
         }
     }
 

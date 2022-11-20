@@ -55,7 +55,7 @@ public class Wings extends Food {
             boolBreaded = true;
             setCalories(intNumber * 100);
         }
-        else if (isboolBreaded.equalsIgnoreCase("no")){
+        if (isboolBreaded.equalsIgnoreCase("no")){
             setCalories(intNumber * 75);
         }
         

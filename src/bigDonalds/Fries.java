@@ -45,15 +45,18 @@ public class Fries extends Food {
         if (strSize == "small"){
             this.setCalories(150);
             intSaltContent = 10;
+            setCost(1.99);
         }
         if (strSize == "medium"){
             this.setCalories(300);
             intSaltContent = 20;
+            setCost(2.49);
 
         }
         if (strSize == "large"){
             this.setCalories(450);
             intSaltContent = 30;
+            setCost(2.99);
         }
     }
 

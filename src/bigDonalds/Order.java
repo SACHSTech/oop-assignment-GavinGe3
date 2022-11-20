@@ -110,6 +110,8 @@ public class Order {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("---Checkout---");
+
         System.out.println("Enter your personal information to complete your order.");
 
         // Prompts customer for their user info
