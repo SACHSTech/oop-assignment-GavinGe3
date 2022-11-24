@@ -9,8 +9,8 @@ import java.util.*;
 
 public class Icecream extends Food{
 
-    boolean withCone;
-    int intSugarContent;
+    private boolean withCone;
+    private int intSugarContent;
 
     /**
      * Constructor method for Icecream

@@ -8,8 +8,8 @@ import java.util.*;
  */
 
 public class Cookies extends Food{
-    int intNumber;
-    int intSugarContent;
+    private int intNumber;
+    private int intSugarContent;
 
     /**
      * Constructor that creates a cookie object

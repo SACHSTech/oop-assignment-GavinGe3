@@ -9,8 +9,8 @@ import java.util.*;
 
 public class Fries extends Food {
     // Instance variables
-    String strSize;
-    int intSaltContent;
+    private String strSize;
+    private int intSaltContent;
 
     /**
      * Constructor method for food

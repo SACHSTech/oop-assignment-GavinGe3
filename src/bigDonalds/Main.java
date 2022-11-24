@@ -50,7 +50,7 @@ public class Main {
 
                 // If customer orders Drink, allow them to customize the food, and add it to the order
                 if (currentOrder > 10){
-                    newMenu.getDrink(currentOrder).showInfo();
+                    newMenu.getDrink(currentOrder).setInfo();
                     newOrder.addDrinkToOrder(newMenu.getDrink(currentOrder));
                     numDrinks += 1;
                 }
@@ -95,7 +95,7 @@ public class Main {
             while (intContinueOrder == 1){
 
                 // Asks customer if they desire to remove Food or Drink
-                System.out.println("Do you want to remove a food or drink?");
+                System.out.println("Do you want to remove a food or drink? (Enter food or drink)");
                 String remove = scanner.nextLine();
 
                 // Show the customer the order summary

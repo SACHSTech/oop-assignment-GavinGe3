@@ -16,35 +16,34 @@ public class Menu{
 
     // All food items on menu
     
-    Fries blank = new Fries("Fries", 2.49, 350, 0 , "medium", 100);
+    private Fries blank = new Fries("Fries", 2.49, 350, 0 , "medium", 100);
 
     // Define wraps and burgers objs
-    BurgersAndWraps burger = new BurgersAndWraps("BigDonalds Burger", 0.00, 450, 1, false, true, "beef", 1, false,"");
-    BurgersAndWraps wrap = new BurgersAndWraps("BigDoanlds Wrap", 7.99, 500, 
+    private BurgersAndWraps burger = new BurgersAndWraps("BigDonalds Burger", 0.00, 450, 1, false, true, "beef", 1, false,"");
+    private BurgersAndWraps wrap = new BurgersAndWraps("BigDoanlds Wrap", 7.99, 500, 
     2, true, false, "chicken", 0, false,"");
 
     // Define fries obj
-    Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50);
+    private Fries fries = new Fries("Fries", 1.99, 200, 3 , "small", 50);
 
     // Define wings objs
-    Wings buffaloWings = new Wings("Bufallo Wings", 0.75, 75, 4, 7, 0, false);
-    Wings honeyGarlicWings = new Wings("Honey Garlic Wings", 0.75, 75, 5, 7, 0, false);
+    private Wings buffaloWings = new Wings("Bufallo Wings", 0.75, 75, 4, 7, 0, false);
+    private Wings honeyGarlicWings = new Wings("Honey Garlic Wings", 0.75, 75, 5, 7, 0, false);
 
     // Define cookies objs
-    Cookies chocolateChip = new Cookies("Chocolate Chip Cookies", 1.00, 150, 6, 0, 15);
-    Cookies oatmeal = new Cookies("Oatmeal Cookies", 1.00, 125, 7, 0, 5);   
+    private Cookies chocolateChip = new Cookies("Chocolate Chip Cookies", 1.00, 150, 6, 0, 15);
+    private Cookies oatmeal = new Cookies("Oatmeal Cookies", 1.00, 125, 7, 0, 5);   
 
     // Define icecream Objs
-    Icecream chocIcecream = new Icecream("Chocolate Icecream", 2.00, 300, 8, false, 50);
-    Icecream vanillaIcecream = new Icecream("Vanilla Icecream", 2.00, 325, 9, false, 50);
-    Icecream GTIcecream = new Icecream("Green Tea Icecream", 2.00, 250, 10, false, 30);
+    private Icecream chocIcecream = new Icecream("Chocolate Icecream", 2.00, 300, 8, false, 50);
+    private Icecream vanillaIcecream = new Icecream("Vanilla Icecream", 2.00, 325, 9, false, 50);
+    private Icecream GTIcecream = new Icecream("Green Tea Icecream", 2.00, 250, 10, false, 30);
 
     // Define Drink objs
-    Coffee expresso = new Coffee("Expresso", "", 0.00, 100, 11, 30, 0);
-    Coffee cappucino = new Coffee("Cappucino", "", 0.00, 200, 12, 15,40);
-    Coffee latte = new Coffee("Latte", "", 0.00, 175, 13, 15, 50 );
-
-    Soda soda = new Soda("Soda", "small", 1.99, 120, 14, 15);
+    private Coffee expresso = new Coffee("Expresso", "", 0.00, 100, 11, 30, 0);
+    private Coffee cappucino = new Coffee("Cappucino", "", 0.00, 200, 12, 15,40);
+    private Coffee latte = new Coffee("Latte", "", 0.00, 175, 13, 15, 50 );
+    private Soda soda = new Soda("Soda", "small", 1.99, 120, 14, 15);
     
 
     /**

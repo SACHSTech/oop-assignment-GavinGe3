@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Soda extends Drink{
 
-    int intSugar;
+    private int intSugar;
 
     /**
      * Constructor method for soda
