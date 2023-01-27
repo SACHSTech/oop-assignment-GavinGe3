@@ -25,8 +25,8 @@ public class Fries extends Food {
 
     public Fries(String strNewFood, double intNewCost, int intNewCalories, int intNewMenNumber, String strNewSize, int intNewSalt){
         super(strNewFood, intNewCost, intNewCalories, intNewMenNumber);
-        strSize = strNewSize;
-        intSaltContent = intNewSalt;
+        this.strSize = strNewSize;
+        this.intSaltContent = intNewSalt;
     }
 
     /**
@@ -37,25 +37,25 @@ public class Fries extends Food {
         Scanner scanner = new Scanner(System.in);
 
         // Allow user to enter size of fries
-        System.out.println("Enter the strSize of your fries (small, medium, or large): ");
+        System.out.println("Enter the this.strSize of your fries (small, medium, or large): ");
         String strNewSize = scanner.nextLine();
-        strSize = strNewSize;
+        this.strSize = strNewSize;
 
         // Change attributes of fries based on user choice
-        if (strSize == "small"){
+        if (this.strSize == "small"){
             this.setCalories(150);
-            intSaltContent = 10;
+            this.intSaltContent = 10;
             setCost(1.99);
         }
-        if (strSize == "medium"){
+        if (this.strSize == "medium"){
             this.setCalories(300);
-            intSaltContent = 20;
+            this.intSaltContent = 20;
             setCost(2.49);
 
         }
-        if (strSize == "large"){
+        if (this.strSize == "large"){
             this.setCalories(450);
-            intSaltContent = 30;
+            this.intSaltContent = 30;
             setCost(2.99);
         }
     }
@@ -68,7 +68,7 @@ public class Fries extends Food {
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Salt (g): " + intSaltContent);
-        System.out.println("Size (g): " + strSize);
+        System.out.println("Salt (g): " + this.intSaltContent);
+        System.out.println("Size (g): " + this.strSize);
     }
 }

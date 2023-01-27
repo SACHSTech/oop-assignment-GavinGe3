@@ -1,4 +1,5 @@
 package bigDonalds;
+import java.io.IOException;
 import java.util.*;
 /**
  * Soda Class File, which extends drink
@@ -22,7 +23,7 @@ public class Soda extends Drink{
     
     public Soda(String strNewName, String strNewSize, double intNewCost, int intNewCalories, int intNewMenuNumber, int intNewSugar){
         super(strNewName, strNewSize, intNewCost, intNewCalories, intNewMenuNumber);
-        intSugar = intNewSugar;
+        this.intSugar = intNewSugar;
     }   
 
     /**
@@ -34,14 +35,14 @@ public class Soda extends Drink{
         System.out.println("Size: " + getSize());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Sugar (g): " + intSugar);
+        System.out.println("Sugar (g): " + this.intSugar);
     }
 
     /**
      * Allows user to set info of soda obj
      * 
      */
-    public void setInfo(){
+    public void setInfo() { 
         Scanner scanner = new Scanner(System.in);
 
         // Prompts user for type of soda
@@ -61,7 +62,7 @@ public class Soda extends Drink{
         if (strNewSize.equalsIgnoreCase("large")){
             setSize(strNewSize);
             setCost(2.50);
-            intSugar *= 1.5;
+            this.intSugar *= 1.5;
         }
     }
 }

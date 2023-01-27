@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Icecream extends Food{
 
-    private boolean withCone;
+    private boolean boolWithCone;
     private int intSugarContent;
 
     /**
@@ -18,14 +18,14 @@ public class Icecream extends Food{
      * @param newCost - cost of icecream
      * @param newCalories - calories of icecream
      * @param newMenuNumber - The number of this food on the menu, used to identify the food
-     * @param newWithCone - If icecream has cone
+     * @param newboolWithCone - If icecream has cone
      * @param newSugar - sugar content of icecream (g)
      */
 
-    public Icecream(String newFood, double newCost, int newCalories, int newMenuNumber, boolean newWithCone, int newSugar){
+    public Icecream(String newFood, double newCost, int newCalories, int newMenuNumber, boolean newboolWithCone, int newSugar){
         super(newFood, newCost, newCalories, newMenuNumber);
-        withCone = newWithCone;
-        intSugarContent = newSugar;
+        boolWithCone = newboolWithCone;
+        this.intSugarContent = newSugar;
     }
 
     /**
@@ -36,15 +36,15 @@ public class Icecream extends Food{
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Do you want a cone? (yes or no): ");
-        String newWithCone = scanner.nextLine();
+        String newboolWithCone = scanner.nextLine();
 
         // Change info of icecream based on user selection
-        if (newWithCone == "yes"){
-            withCone = true;
+        if (newboolWithCone == "yes"){
+            this.boolWithCone = true;
             setCalories(getCalories() + 50);
         }
-        if (newWithCone == "no"){
-            withCone = false;
+        if (newboolWithCone == "no"){
+            this.boolWithCone = false;
             setCalories(getCalories() + 50);
 
         }
@@ -60,8 +60,8 @@ public class Icecream extends Food{
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Sugar (g): " + intSugarContent);
-        System.out.println("Has Cone: " + withCone);
+        System.out.println("Sugar (g): " + this.intSugarContent);
+        System.out.println("Has Cone: " + this.boolWithCone);
     }
 }
     

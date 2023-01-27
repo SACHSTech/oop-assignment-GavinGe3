@@ -20,14 +20,14 @@ public abstract class Drink {
      * @param newSize - size of drink
      * @param newCost - cost of drink
      * @param newCalories - calories of drink
-     * @param newintMenuNumber - The number of this drink on the menu, used to identify the drink
+     * @param newthis.intMenuNumber - The number of this drink on the menu, used to identify the drink
      */
     public Drink(String newName, String newSize, double newCost, int newCalories, int newintMenuNumber){
-        strItemName = newName;
-        strSize = newSize;
-        dblCost = newCost;
-        intCalories = newCalories;
-        intMenuNumber = newintMenuNumber;
+        this.strItemName = newName;
+        this.strSize = newSize;
+        this.dblCost = newCost;
+        this.intCalories = newCalories;
+        this.intMenuNumber = newintMenuNumber;
     }
 
     /**
@@ -37,7 +37,7 @@ public abstract class Drink {
      */
 
     public double getCost(){
-        return dblCost;
+        return this.dblCost;
     }
     /**
      * Returns the name of the drink
@@ -46,7 +46,7 @@ public abstract class Drink {
      */
 
     public String getName(){
-        return strItemName;
+        return this.strItemName;
     }
 
     /**
@@ -56,7 +56,7 @@ public abstract class Drink {
      */
 
     public void setName(String newName){
-        strItemName = newName;
+        this.strItemName = newName;
     }
 
     /**
@@ -65,7 +65,7 @@ public abstract class Drink {
      * @return - size of drink
      */
     public String getSize(){
-        return strSize;
+        return this.strSize;
     }
     
     /**
@@ -74,7 +74,7 @@ public abstract class Drink {
      * @param newSize - new size of drink
      */
     public void setSize(String newSize){
-        strSize = newSize;
+        this.strSize = newSize;
     }
 
     /**
@@ -83,7 +83,7 @@ public abstract class Drink {
      * @param cost - new cost of drink
      */
     public void setCost(double cost){
-        dblCost = cost;
+        this.dblCost = cost;
     }
     
     /**
@@ -92,25 +92,25 @@ public abstract class Drink {
      * @param newCalories new calories of drink
      */
     public void setCalories(double newCalories){
-        intCalories = (int)newCalories;
+        this.intCalories = (int)newCalories;
     }
 
     /**
      * return calories of drink
      * 
-     * @return intCalories - callories of the drink
+     * @return this.intCalories - callories of the drink
      */
     public int getCalories(){
-        return intCalories;
+        return this.intCalories;
     }
 
     /**
      * to string method
      * 
-     * @return intMenuNumber, strItemName - the item number and string 
+     * @return this.intMenuNumber, this.strItemName - the item number and string 
      */
     public String toString(){
-        return intMenuNumber + " - " + strItemName;
+        return this.intMenuNumber + " - " + this.strItemName;
     }
 
     /**

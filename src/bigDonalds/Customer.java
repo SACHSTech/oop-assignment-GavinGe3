@@ -34,23 +34,23 @@ public class Customer {
         // Allow user to enter info
         System.out.print("Enter your Address: ");
         newstrAddress = scanner.nextLine();
-        strAddress = newstrAddress;
+        this.strAddress = newstrAddress;
 
         System.out.print("Enter your credit card number: ");
         newintPaymentInfo = Integer.parseInt(scanner.nextLine());
-        intPaymentInfo = newintPaymentInfo;
+        this.intPaymentInfo = newintPaymentInfo;
 
         System.out.print("Enter your Name: ");
         newstrName = scanner.nextLine();
-        strName = newstrName;
+        this.strName = newstrName;
 
         System.out.print("Enter your phone number: ");
         newdblPhoneNumber = Double.parseDouble(scanner.nextLine());
-        dblPhoneNumber = newdblPhoneNumber;
+        this.dblPhoneNumber = newdblPhoneNumber;
 
         System.out.print("Enter your Email: ");
         newstrEmail = scanner.nextLine();
-        strEmail = newstrEmail;
+        this.strEmail = newstrEmail;
         }
 
         /**
@@ -58,11 +58,11 @@ public class Customer {
          */
         public void showInfo(){
             System.out.println("---Customer Info---");
-            System.out.println("Address: " + strAddress);
-            System.out.println("Credit Card Number: " + intPaymentInfo);
-            System.out.println("Name: " + strName); 
-            System.out.println("Phone Number: " + dblPhoneNumber);
-            System.out.println("Email: " + strEmail);
+            System.out.println("Address: " + this.strAddress);
+            System.out.println("Credit Card Number: " + this.intPaymentInfo);
+            System.out.println("Name: " + this.strName); 
+            System.out.println("Phone Number: " + this.dblPhoneNumber);
+            System.out.println("Email: " + this.strEmail);
         }
     }
 

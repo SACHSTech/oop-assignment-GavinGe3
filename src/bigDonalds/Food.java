@@ -12,7 +12,7 @@ public abstract class Food{
     private String strItemName;
     private double dblCost;
     private int intCalories;
-    private int menuNumber;
+    private int intMenuNumber;
 
     /**
      * Constructor method for food
@@ -20,14 +20,14 @@ public abstract class Food{
      * @param newFood - name of Food
      * @param newCost - cost of Food
      * @param newCalories - Calories of food
-     * @param newMenuNumber - The number of this food on the menu, used to identify the food
+     * @param newthis.intMenuNumber - The number of this food on the menu, used to identify the food
      */
-    public Food(String newFood, double newCost, int newCalories, int newMenuNumber){
+    public Food(String newFood, double newCost, int newCalories, int newintMenuNumber){
 
-        strItemName = newFood;
-        dblCost = newCost;
-        intCalories = newCalories;
-        menuNumber = newMenuNumber;
+        this.strItemName = newFood;
+        this.dblCost = newCost;
+        this.intCalories = newCalories;
+        this.intMenuNumber = newintMenuNumber;
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class Food{
      * @return Cost of food
      */
     public double getCost(){
-        return dblCost;
+        return this.dblCost;
     }
 
     /**
@@ -45,7 +45,7 @@ public abstract class Food{
      * @return name of food
      */
     public String getName(){
-        return strItemName;
+        return this.strItemName;
     }
     /**
      * Decides what to print out when printing the class
@@ -53,7 +53,7 @@ public abstract class Food{
      * @return the menu Number and name of the food
      */
     public String toString(){
-        return menuNumber + " - " + strItemName;
+        return this.intMenuNumber + " - " + this.strItemName;
     }
 
     /**
@@ -63,7 +63,7 @@ public abstract class Food{
      */
 
     public void setCost(double cost){
-        dblCost = cost;
+        this.dblCost = cost;
     }
 
     /**
@@ -72,7 +72,7 @@ public abstract class Food{
      * @param newCalories - new cost of food
      */
     public void setCalories(int newCalories){
-        intCalories = newCalories;
+        this.intCalories = newCalories;
     }
 
     /**
@@ -81,7 +81,7 @@ public abstract class Food{
      * @return calories of food
      */
     public int getCalories(){
-        return intCalories;
+        return this.intCalories;
     }
     
     /**

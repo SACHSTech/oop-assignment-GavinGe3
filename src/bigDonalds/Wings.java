@@ -25,9 +25,9 @@ public class Wings extends Food {
 
     public Wings(String strNewFood, double dblNewCost, int intNewCalories, int intNewMenuNumber, int intNewSalt, int intNewNumber, boolean boolNewBreaded){
         super(strNewFood, dblNewCost, intNewCalories, intNewMenuNumber);
-        intSaltContent = intNewSalt;
-        intNumber = intNewNumber;
-        boolBreaded = boolNewBreaded;
+        this.intSaltContent = intNewSalt;
+        this.intNumber = intNewNumber;
+        this.boolBreaded = boolNewBreaded;
     }
 
     /**
@@ -41,10 +41,10 @@ public class Wings extends Food {
         // Prompts user for num of wings
         System.out.println("How many wings do you want:");
         int setintNumber = Integer.parseInt(scanner.nextLine());
-        intNumber = setintNumber;
+        this.intNumber = setintNumber;
 
         // Changes wings salt content attributes based on num
-        intSaltContent = intNumber * intSaltContent;
+        this.intSaltContent = this.intNumber * this.intSaltContent;
 
         // prompts user if they want breaded wings
         System.out.println("Do you want breaded wings? (yes or no): ");
@@ -52,15 +52,15 @@ public class Wings extends Food {
 
         // Changes calories of wings based on if breaded
         if (isboolBreaded.equalsIgnoreCase("yes")){
-            boolBreaded = true;
-            setCalories(intNumber * 100);
+            this.boolBreaded = true;
+            setCalories(this.intNumber * 100);
         }
         if (isboolBreaded.equalsIgnoreCase("no")){
-            setCalories(intNumber * 75);
+            setCalories(this.intNumber * 75);
         }
         
         // Changes cost of wings based on amount
-        this.setCost(intNumber * this.getCost());
+        this.setCost(this.intNumber * this.getCost());
     }
 
     /**
@@ -71,9 +71,9 @@ public class Wings extends Food {
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Salt (g): " + intSaltContent);
-        System.out.println("Amount: " + intNumber);
-        System.out.println("Breaded: " + boolBreaded);
+        System.out.println("Salt (g): " + this.intSaltContent);
+        System.out.println("Amount: " + this.intNumber);
+        System.out.println("Breaded: " + this.boolBreaded);
     }
 }
 

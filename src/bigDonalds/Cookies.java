@@ -24,8 +24,8 @@ public class Cookies extends Food{
 
     public Cookies(String strNewFood, double dblNewCost, int intNewCalories, int intNewMenuNumber, int intNewAmount, int intNewSugar){
         super(strNewFood, dblNewCost, intNewCalories, intNewMenuNumber);
-        intNumber = intNewAmount;
-        intSugarContent = intNewSugar;
+        this.intNumber = intNewAmount;
+        this.intSugarContent = intNewSugar;
     }
     /**
      *  Allows user to set the number of cookies they want
@@ -35,13 +35,13 @@ public class Cookies extends Food{
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Enter the number of cookies you want: ");
-        int setintNumber = scanner.nextInt();
-        intNumber = setintNumber;
+        int setIntNumber = scanner.nextInt();
+        this.intNumber = setIntNumber;
 
         // Change object info based on # of cookies
-        intSugarContent = intNumber * intSugarContent;
-        setCost(getCost() * intNumber);
-        setCalories(intNumber * getCalories());
+        this.intSugarContent = this.intNumber * this.intSugarContent;
+        setCost(getCost() * this.intNumber);
+        setCalories(this.intNumber * getCalories());
     }
 
     /**
@@ -52,7 +52,7 @@ public class Cookies extends Food{
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Sugar (g): " + intSugarContent);
-        System.out.println("Amount: " + intNumber);
+        System.out.println("Sugar (g): " + this.intSugarContent);
+        System.out.println("Amount: " + this.intNumber);
     }
 }

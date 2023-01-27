@@ -25,8 +25,8 @@ public class Coffee extends Drink{
 
     public Coffee(String strNewName, String strNewSize, double dblNewCost, int intNewCalories, int intNewMenuNumber, int intNewCaffeine, int intNewMilk){
         super(strNewName, strNewSize, dblNewCost, intNewCalories, intNewMenuNumber);
-        intMgCaffeine = intNewCaffeine;
-        intPercentMilk = intNewMilk;
+        this.intMgCaffeine = intNewCaffeine;
+        this.intPercentMilk = intNewMilk;
     }
 
     /**
@@ -45,7 +45,7 @@ public class Coffee extends Drink{
         if (strNewSize.equalsIgnoreCase("small")){
             setSize(strNewSize);
             setCost(1.99);
-            intMgCaffeine = 20;
+            this.intMgCaffeine = 20;
         }
 
         // If size is small set size to small and adjust coffee variables
@@ -53,15 +53,15 @@ public class Coffee extends Drink{
             setSize(strNewSize);
             setCost(2.49);
             setCalories(getCalories() * 1.5);
-            intMgCaffeine *= 1.5;
+            this.intMgCaffeine *= 1.5;
         }
 
         // If size is small set size to small and adjust coffee variables
-        if (strNewSize.equalsIgnoreCase("medium")){
+        if (strNewSize.equalsIgnoreCase("large")){
             setSize(strNewSize);
             setCost(3.49);
             setCalories(getCalories() * 2);
-            intMgCaffeine *= 2;
+            this.intMgCaffeine *= 2;
         }
     }
 
@@ -73,8 +73,8 @@ public class Coffee extends Drink{
         System.out.println("Name: " + getName());
         System.out.println("Cost: $" + getCost());
         System.out.println("Calories: " + getCalories()); 
-        System.out.println("Caffeine (mg): " + intMgCaffeine);
-        System.out.println("Milk%: " + intPercentMilk);
+        System.out.println("Caffeine (mg): " + this.intMgCaffeine);
+        System.out.println("Milk%: " + this.intPercentMilk);
         System.out.println("Size: " + getSize());
     }
     

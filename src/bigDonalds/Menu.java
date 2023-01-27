@@ -51,23 +51,23 @@ public class Menu{
      */
     public Menu(){
         // Add Foods to foods arraylist
-        listOfFoods.add(blank);
-        listOfFoods.add(burger);
-        listOfFoods.add(wrap);
-        listOfFoods.add(fries);
-        listOfFoods.add(buffaloWings);
-        listOfFoods.add(honeyGarlicWings);
-        listOfFoods.add(chocolateChip);
-        listOfFoods.add(oatmeal);
-        listOfFoods.add(chocIcecream);
-        listOfFoods.add(vanillaIcecream);
-        listOfFoods.add(GTIcecream);
+        this.listOfFoods.add(this.blank);
+        this.listOfFoods.add(this.burger);
+        this.listOfFoods.add(this.wrap);
+        this.listOfFoods.add(this.fries);
+        this.listOfFoods.add(this.buffaloWings);
+        this.listOfFoods.add(this.honeyGarlicWings);
+        this.listOfFoods.add(this.chocolateChip);
+        this.listOfFoods.add(this.oatmeal);
+        this.listOfFoods.add(this.chocIcecream);
+        this.listOfFoods.add(this.vanillaIcecream);
+        this.listOfFoods.add(this.GTIcecream);
 
         // Add Drinks to drinks arraylist
-        listOfDrinks.add(expresso);
-        listOfDrinks.add(cappucino);
-        listOfDrinks.add(latte);
-        listOfDrinks.add(soda);
+        this.listOfDrinks.add(this.expresso);
+        this.listOfDrinks.add(this.cappucino);
+        this.listOfDrinks.add(this.latte);
+        this.listOfDrinks.add(this.soda);
 
     }
 
@@ -77,12 +77,12 @@ public class Menu{
      */
     public void getInfo(){
         System.out.println("---Foods---");
-        for (int i = 1; i < listOfFoods.size(); i++){
-            System.out.println(listOfFoods.get(i));
+        for (int i = 1; i < this.listOfFoods.size(); i++){
+            System.out.println(this.listOfFoods.get(i));
         }
         System.out.println("---Drinks---");
-        for (int i = 0; i < listOfDrinks.size(); i++){
-            System.out.println(listOfDrinks.get(i));
+        for (int i = 0; i < this.listOfDrinks.size(); i++){
+            System.out.println(this.listOfDrinks.get(i));
         }
     }
 
@@ -93,7 +93,7 @@ public class Menu{
      * @return the desired food item
      */
     public Food getFood(int i){
-        return listOfFoods.get(i);
+        return this.listOfFoods.get(i);
     }
 
     /**
@@ -103,6 +103,6 @@ public class Menu{
      * @return the desired drink item
      */
     public Drink getDrink(int i){
-        return listOfDrinks.get((i - 11));
+        return this.listOfDrinks.get((i - 11));
     }
 }

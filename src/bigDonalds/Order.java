@@ -20,7 +20,7 @@ public class Order {
      * 
      */
     public Order(){
-        customer = new Customer();
+        this.customer = new Customer();
         
     }
 
@@ -31,7 +31,7 @@ public class Order {
      */
     public void addFoodToOrder(Food newFood){
         listOfFoods.add(newFood);
-        dblSubtotal += newFood.getCost();
+        this.dblSubtotal += newFood.getCost();
     }
 
     /**
@@ -41,7 +41,7 @@ public class Order {
      */
     public void addDrinkToOrder(Drink newDrink){
         listOfDrinks.add(newDrink);
-        dblSubtotal += newDrink.getCost();
+        this.dblSubtotal += newDrink.getCost();
     }
 
     /**
@@ -50,7 +50,7 @@ public class Order {
      * @param i the number of the food item to be removed
      */
     public void removeFoodFromOrder(int i){
-        dblSubtotal -= listOfFoods.get(i).getCost();
+        this.dblSubtotal -= listOfFoods.get(i).getCost();
         listOfFoods.remove(i);
     }
 
@@ -60,7 +60,7 @@ public class Order {
      * @param i the number of the drink item to be removed
      */
     public void removeDrinkFromOrder(int i){
-        dblSubtotal -= listOfDrinks.get(i).getCost();
+        this.dblSubtotal -= listOfDrinks.get(i).getCost();
         listOfDrinks.remove(i);
     }
     /**
@@ -68,7 +68,7 @@ public class Order {
      * @return subtotal or order
      */
     public double getCost(){
-        return dblSubtotal;
+        return this.dblSubtotal;
     }
 
     /**
@@ -97,9 +97,9 @@ public class Order {
 
         // Displays the subtotal and total cost of customers order
         System.out.println("---Cost---");
-        System.out.println("Your subtotal is: $" + Math.round(dblSubtotal * 100.0) / 100.0);
-        dblTotal = (dblSubtotal + 5) * 1.13;
-        System.out.println("Your total with tax and delivery ($5) is: $" + Math.round(dblTotal * 100.0) / 100.0);
+        System.out.println("Your subtotal is: $" + Math.round(this.dblSubtotal * 100.0) / 100.0);
+        this.dblTotal = (this.dblSubtotal + 5) * 1.13;
+        System.out.println("Your total with tax and delivery ($5) is: $" + Math.round(this.dblTotal * 100.0) / 100.0);
     }
 
     /**
@@ -115,12 +115,12 @@ public class Order {
         System.out.println("Enter your personal information to complete your order.");
 
         // Prompts customer for their user info
-        customer.setInfo();
+        this.customer.setInfo();
 
         // Displays to the screen the customers order and info
         this.showOrder(listOfFoods.size(), listOfDrinks.size());
         System.out.println();
-        customer.showInfo();
+        this.customer.showInfo();
         System.out.println("Thank you for your order. It will be arriving in approximately 30 minutes.");
     }
 
